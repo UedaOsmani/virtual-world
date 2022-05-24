@@ -39,7 +39,15 @@ export default function App() {
           element={
             <Screen image="/link.png">
               <Button to="/intro-1" x="145" y="330" w="110" h="45" />
-              <Button to="/create-avatar" x="290" y="330" w="170" h="45" />
+              <Button to="/connectvr" x="290" y="330" w="170" h="45" />
+            </Screen>
+          }
+        />
+         <Route
+          path="/connectvr"
+          element={
+            <Screen image="/vr.jpg">
+              <Button to="/create-avatar" x="290" y="330" w="270" h="245" />
             </Screen>
           }
         />
@@ -47,26 +55,11 @@ export default function App() {
           path="/create-avatar"
           element={
             <Screen image="/Create-avatar.png" back="/">
-              <Button to="/welcome" x="215" y="360" w="170" h="40" />
+              <Button to="/sampleVR" x="215" y="360" w="170" h="40" />
             </Screen>
           }
         />
-        <Route
-          path="/welcome"
-          element={
-            <Screen image="/Welcome.png" back="/create-avatar">
-              <Button to="/example-UI" x="230" y="275" w="150" h="55" />
-            </Screen>
-          }
-        />
-        <Route
-          path="/example-UI"
-          element={
-            <Screen image="/example-UI.png" back="/welcome">
-              <Button to="/sampleVR" x="10" y="10" w="500" h="400" />
-            </Screen>
-          }
-        />
+      
         <Route
           path="/sampleVR"
           element={
@@ -77,6 +70,7 @@ export default function App() {
               allow="autoplay"
               src="https://www.youtube.com/embed/7LX6GPRL5-4?autoplay=1"
             ></iframe>
+
           }
         />
         {/* <Route
