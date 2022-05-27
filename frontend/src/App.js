@@ -55,7 +55,7 @@ export default function App() {
           path="/create-avatar"
           element={
             <Screen image="/Create-avatar.png" back="/">
-              <Button to="/sampleVR" x="215" y="360" w="170" h="40" />
+              <Button to="/sampleVR" x="215" y="360" w="171" h="40" />
             </Screen>
           }
         />
