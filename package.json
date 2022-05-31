@@ -1,0 +1,22 @@
+{
+  "name": "batch16--virtual--ninjas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DigitalProductschool/batch16--virtual--ninjas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DigitalProductschool/batch16--virtual--ninjas/issues"
+  },
+  "homepage": "https://github.com/DigitalProductschool/batch16--virtual--ninjas#readme",
+  "dependencies": {
+    "socket.io": "^4.5.1"
+  }
+}
