@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Jumbotron } from "reactstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Buttondata from "./Buttondata";
 
 const Welcome = () => {
