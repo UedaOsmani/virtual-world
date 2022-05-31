@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Jumbotron } from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Buttondata from "./Buttondata";
 
 const Welcome = () => {
   return (
@@ -94,9 +95,8 @@ const Welcome = () => {
 <h3>Put your VR headsets on to enter <b style={{color:"#f70041"}}>Virtual Ninjas </b> room ...</h3>
 <img style={{width:'19%'}} src="/animation-vr-man-dribbble.gif" />
  <img style={{width:'19%'}} src="/5ffd86ccac7b0153b653786d_8_200106_PR_VE_overview_01-500kb.jpg" />
-        <div className="intro-button">
-          <a href="">Get Started</a>
-        </div>
+       
+        <Buttondata />
         <div className="company-icons">
           <p style={{color:'white'}}>© 2021 Magnid GmbH, All Rights Reserved.</p>
         </div>
@@ -143,23 +143,7 @@ const Welcome = () => {
           max-width: 95%;
           height: auto;
         }
-        .intro-button {
-          margin-top: 2.3em;
-          margin-bottom: 3em;
-        }
-        .intro-button a {
-          padding: 0.65em 2.6em;
-          border-radius: 20px;
-          color: white;
-          border: 1.8px solid white;
-          background-image: linear-gradient(to right, #000a33 15%, #f70041 100%, #000a33 100%);
-          transition: all 0.5s;
-          text-decoration: none;
-        }
-        .intro-button a:hover {
-          background-image: none;
-          color: white;
-        }
+     
 
      
       `}</style>
