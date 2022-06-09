@@ -5,11 +5,11 @@ import Loginpage from "./Loginpage";
 import Axios  from "axios";
 import LogoMagnid from "./LogoMagnid";
 
-const Welcome = (props) => {
+const Welcome2 = (props) => {
   const url="https://frozen-mesa-35935.herokuapp.com/"
   const [data, setData] = useState({
       name:"",
-      roomNr:"1"
+      roomNr:"2"
   })
   
   function handle(e) {
@@ -32,7 +32,7 @@ const Welcome = (props) => {
   
       Axios.post(url,{
           name:data.name,
-          roomNr: "1"
+          roomNr: "2"
       })
       .then(res=> {
           console.log(res.data)
@@ -124,4 +124,4 @@ const Welcome = (props) => {
   );
 };
 
-export default Welcome;
+export default Welcome2;

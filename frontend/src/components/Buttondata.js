@@ -3,7 +3,7 @@ import {useState} from 'react';
 import axios from 'axios';
 
 const Buttondata = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [hidden, setHidden] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState('');
@@ -39,10 +39,10 @@ const Buttondata = () => {
 
     
           <div className='data2'>
-           {data.player_0 && <h4>Player name: {data.player_0}  </h4>} 
-          
-           {data.room_nr && <h4>Room number:
-            {data.room_nr}</h4> } 
+            <h4>Player name: {data.player_0}
+           </h4>
+            <h4>Room number:
+            {data.room_nr}</h4>
        
             <br />
           </div>

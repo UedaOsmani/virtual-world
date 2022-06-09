@@ -80,7 +80,8 @@ export default class FormDataComponent extends Component {
 
 function Login() {
 
-const url="https://virtual-ninjas-backend.herokuapp.com/api" 
+/*const url="https://virtual-ninjas-backend.herokuapp.com/api" */
+const url="https://frozen-mesa-35935.herokuapp.com/"
 const [data, setData] = useState({
     name:"",
     date:"",
@@ -95,7 +96,7 @@ function handle(e) {
 }
 function submit(e) {
     e.preventDefault();
-  Axios.post(`${url}/event/join`,{
+  /*  Axios.post(`${url}/event/join`,{
         name:data.name,
         date: date.date,
         roomNr: parseInt(data.roomNr)
@@ -103,7 +104,16 @@ function submit(e) {
     .then(res=> {
         console.log(res.data)
     })
- 
+    */
+
+    Axios.post(url,{
+        name:data.name,
+        date: date.date,
+        roomNr: parseInt(data.roomNr)
+    })
+    .then(res=> {
+        console.log(res.data)
+    })
 }
 
     return (
