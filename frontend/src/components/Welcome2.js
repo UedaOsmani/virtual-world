@@ -9,7 +9,7 @@ const Welcome2 = (props) => {
   const url="https://frozen-mesa-35935.herokuapp.com/"
   const [data, setData] = useState({
       name:"",
-      roomNr:"2"
+      roomNr:"0"
   })
   
   function handle(e) {
