@@ -6,7 +6,7 @@ import Axios  from "axios";
 import LogoMagnid from "./LogoMagnid";
 
 const Welcome2 = (props) => {
-  const url="https://frozen-mesa-35935.herokuapp.com/"
+  const url="https://virtual-ninjas-backend.herokuapp.com/api/event/join"
   const [data, setData] = useState({
       name:"",
       roomNr:"0"

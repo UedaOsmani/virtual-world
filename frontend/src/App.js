@@ -14,7 +14,7 @@ export default function App() {
    <Route path="/lobby" element={<Preferences />} />
  </Routes>
  </BrowserRouter>
-      
+     
     </div>
   );
 }
