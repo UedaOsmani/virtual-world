@@ -32,10 +32,10 @@ const Welcome2 = (props) => {
   
       Axios.post(url,{
           name:data.name,
-          roomNr: "2"
+          roomNr: "0"
       })
       .then(res=> {
-          console.log(res.data)
+          alert("You are entering the room!")
       })
   }
   

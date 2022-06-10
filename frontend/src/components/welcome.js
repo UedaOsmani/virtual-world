@@ -35,7 +35,7 @@ const Welcome = (props) => {
           roomNr: "1"
       })
       .then(res=> {
-          console.log(res.data)
+        alert("You are entering the room!")
       })
   }
   
