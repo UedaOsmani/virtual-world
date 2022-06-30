@@ -1,81 +1,96 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Container, Jumbotron } from "reactstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loginpage from "./Loginpage";
-import Axios  from "axios";
+import Axios from "axios";
 import LogoMagnid from "./LogoMagnid";
 
-const Welcome = (props) => {
-  const url="https://virtual-ninjas-backend.herokuapp.com/api/event/join"
-  const [data, setData] = useState({
-      name:"",
-      roomNr:"1"
-  })
-  
-  function handle(e) {
-      const newdata = { ...data }
-      newdata[e.target.id] = e.target.value
-      setData(newdata)
-      console.log(newdata)
-  }
-  function submit(e) {
-      e.preventDefault();
-    /*  Axios.post(`${url}/event/join`,{
-          name:data.name,
-          date: date.date,
-          roomNr: parseInt(data.roomNr)
-      })
-      .then(res=> {
-          console.log(res.data)
-      })
-      */
-  
-      Axios.post(url,{
-          name:data.name,
-          roomNr: "1"
-      })
-      .then(res=> {
-        alert("You are entering the room!")
-      })
-  }
-  
+const Welcome = () => {
+  // const url = "https://virtual-ninjas-backend.herokuapp.com/api/event/join";
+  // const [data, setData] = useState({
+  //   name: "",
+  //   roomNr: "1",
+  //   message: ""
+  // });
+
+  // function handle(e) {
+  //   const newdata = { ...data };
+  //   newdata[e.target.id] = e.target.value;
+  //   setData(newdata);
+  //   console.log(newdata);
+  // }
+  // function submit(e) {
+  //   e.preventDefault();
+  //   Axios.post(url, {
+  //     name: data.name,
+  //     roomNr: "1",
+  //   }).then((res) => {
+  //    setData({ message: "You are entering the room!" });
+  //   });
+  // }
+
+
+
   return (
     <header>
       <div className="intro-logo jumbo-bg">
-          <div> 
- <LogoMagnid />
-</div>
+        <div>
+          <LogoMagnid />
+        </div>
 
-<h1>Welcome to Magnid</h1>
-<h3>Put your VR headsets on to enter <b style={{color:"#f70041"}}> {props.title} </b> room.</h3>
-<form onSubmit={(e) => submit(e)} style={{paddingBottom:'10px'}}>
-  <label style={{color:'white'}}>
-    Your Name: <input onChange={(e)=>handle(e)} id="name" value={data.name} type="text" placeholder="name" />
+        <h1>Welcome to Magnid</h1>
+        <h3>
+         First time? <a> Get started </a>
+        </h3>
+        <h3>Already installed Altspace on VR? Enter the code <span style={{color:"blue", fontWeight:"700"}}>PDG162</span> </h3>
+        <h3>No headset available? Join <a href="altspace://account.altvr.com/api/spaces/philip-s-world-9152">here</a> </h3>
+        {/* {data.message && <h3 className=""> {data.message} </h3>}
+        <form onSubmit={(e) => submit(e)} style={{ paddingBottom: "10px" }}>
+          <label style={{ color: "white" }}>
+            Your Name:{" "}
+            <input
+             required
+              onChange={(e) => handle(e)}
+              id="name"
+              value={data.name}
+              type="text"
+              placeholder="name"
+              name="name"
+            />
+          </label>
+          <button className="intro-button">Enter</button>
+        </form>  */}
+        <img style={{ width: "19%" }} src="/animation-vr-man-dribbble.gif" />
+        <img
+          style={{ width: "19%" }}
+          src="/5ffd86ccac7b0153b653786d_8_200106_PR_VE_overview_01-500kb.jpg"
+        />
 
-  </label>
-            <button className='intro-button'>Enter</button>
-            </form>
-<img style={{width:'19%'}} src="/animation-vr-man-dribbble.gif" />
- <img style={{width:'19%'}} src="/5ffd86ccac7b0153b653786d_8_200106_PR_VE_overview_01-500kb.jpg" />
-       
         <div className="company-icons">
-          <p style={{color:'white'}}>© 2021 Magnid GmbH, All Rights Reserved.</p>
+          <p style={{ color: "white" }}>
+            © 2021 Magnid GmbH, All Rights Reserved.
+          </p>
         </div>
       </div>
 
       <style jsx>{`
-       .intro-button {
-        margin-left:2px;
-      color: white;
-      border: 1.2px solid white;
-      background-image: linear-gradient(to right, #000a33 15%, #f70041 100%, #000a33 100%);
-      transition: all 0.5s;
-      text-decoration: none;
-    }
-    .intro-button:hover {
-      background-image: none;
-      color: white;
-    }
+        .intro-button {
+          margin-left: 2px;
+          color: white;
+          border: 1.2px solid white;
+          background-image: linear-gradient(
+            to right,
+            #000a33 15%,
+            #f70041 100%,
+            #000a33 100%
+          );
+          transition: all 0.5s;
+          text-decoration: none;
+        }
+        .intro-button:hover {
+          background-image: none;
+          color: white;
+        }
         header {
           margin-bottom: 1rem;
           height: 100vh;
@@ -94,7 +109,7 @@ const Welcome = (props) => {
         }
 
         .intro-logo h1 {
-            margin-top:10px;
+          margin-top: 10px;
           font-size: 1.8em;
           font-weight: 900;
           font-family: "Philosopher", sans-serif;
@@ -116,9 +131,6 @@ const Welcome = (props) => {
           max-width: 95%;
           height: auto;
         }
-     
-
-     
       `}</style>
     </header>
   );

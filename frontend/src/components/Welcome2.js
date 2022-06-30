@@ -9,7 +9,8 @@ const Welcome2 = (props) => {
   const url="https://virtual-ninjas-backend.herokuapp.com/api/event/join"
   const [data, setData] = useState({
       name:"",
-      roomNr:"0"
+      roomNr:"0",
+      message: ""
   })
   
   function handle(e) {
@@ -20,22 +21,13 @@ const Welcome2 = (props) => {
   }
   function submit(e) {
       e.preventDefault();
-    /*  Axios.post(`${url}/event/join`,{
-          name:data.name,
-          date: date.date,
-          roomNr: parseInt(data.roomNr)
-      })
-      .then(res=> {
-          console.log(res.data)
-      })
-      */
-  
+
       Axios.post(url,{
           name:data.name,
           roomNr: "0"
       })
       .then(res=> {
-          alert("You are entering the room!")
+        setData({ message: "You are entering the room!" });
       })
   }
   

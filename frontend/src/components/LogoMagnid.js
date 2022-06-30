@@ -3,7 +3,7 @@ import react from "react";
 function LogoMagnid() {
     return(
         <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="292" height="117" viewBox="0 0 392 117" fill="none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="252" height="117" viewBox="0 0 392 117" fill="none">
 <path d="M145.955 107.663L140.561 94.8582H138.208L144.646 110.082H146.877L153.347 94.8582H151.15L145.955 107.663Z" fill="white"/>
 <path d="M159.596 94.8582H157.398V110.082H159.596V94.8582Z" fill="white"/>
 <path d="M159.718 89.7319H157.276V92.1397H159.718V89.7319Z" fill="white"/>

@@ -1,8 +1,9 @@
 import {  Route, BrowserRouter, Routes } from "react-router-dom";
 import React, {useState} from "react";
 import "./styles.css";
-import Dashboard from "./components/Dashboard/Dashboard";
-import Preferences from "./components/Preferences/Preferences";
+import Networking from "./components/Networking/Networking";
+import Lobby from "./components/Lobby/Lobby";
+import Main from "./components/Main";
 
 export default function App() {
   
@@ -10,8 +11,9 @@ export default function App() {
     <div className="wrapper">
  <BrowserRouter>
  <Routes>
-   <Route path="/networking" element={<Dashboard />} />
-   <Route path="/lobby" element={<Preferences />} />
+ <Route path="/" element={<Main />} />
+   <Route path="/networking" element={<Networking />} />
+   <Route path="/lobby" element={<Lobby />} />
  </Routes>
  </BrowserRouter>
      
