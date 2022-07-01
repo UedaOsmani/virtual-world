@@ -60,7 +60,7 @@ const Welcome = () => {
           </label>
           <button className="intro-button">Enter</button>
         </form>  */}
-        <img style={{ width: "19%" }} src="/animation-vr-man-dribbble.gif" />
+        <img style={{ width: "18%" }} src="/animation-vr-man-dribbble.gif" />
         <img
           style={{ width: "19%" }}
           src="/5ffd86ccac7b0153b653786d_8_200106_PR_VE_overview_01-500kb.jpg"
@@ -68,7 +68,7 @@ const Welcome = () => {
 
         <div className="company-icons">
           <p style={{ color: "white" }}>
-            © 2021 Magnid GmbH, All Rights Reserved.
+            © 2021 Magnid GmbH, All Rights Reserved. 
           </p>
         </div>
       </div>
