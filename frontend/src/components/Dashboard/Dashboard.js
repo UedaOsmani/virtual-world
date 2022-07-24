@@ -1,8 +1,7 @@
 import react from "react";
 import Welcome from "../welcome";
-import Players from "../Players";
 
-function Networking() {
+function Dashboard() {
  
     return(
         <div>
@@ -11,4 +10,4 @@ function Networking() {
     )
 }
 
-export default Networking
+export default Dashboard

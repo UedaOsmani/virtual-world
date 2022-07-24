@@ -1,48 +1,33 @@
-import React, {useState} from "react";
-import { Container, Jumbotron } from "reactstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Loginpage from "./Loginpage";
-import Axios  from "axios";
-import LogoMagnid from "./LogoMagnid";
-
-const Welcome2 = (props) => {
-
+import React, { useState } from "react";
+const Welcome3 = (props) => {
   return (
     <header>
-         <div className="intro-logo jumbo-bg">
-      <div
+      <div className="intro-logo jumbo-bg">
+        <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
+            gridTemplateColumns: "repeat(1, 1fr)",
             gridGap: 20,
           }}
         >
           <div className="boxes">
-            <img style={{ width: "33%" }} src="/questions.gif" />
-            <h3>
-              First time in VR? <br />{" "}
-              <a href="https://alexanderpilotto.de/suco/setup?user=vrtest">
-                {" "}
-                Get Started!{" "}
-              </a>
-            </h3>
-          </div>
-          <div className="boxes">
             {" "}
-            <img
-              style={{ width: "46%" }}
-              src="/animation-vr-man-dribbble.gif"
-            />
+            <img style={{ width: "43%" }} src="/Jfd5.gif" />
             <h3>
-              Have you already installed Altspace on VR? <br /> Enter the code{" "}
-              <span style={{ color: "blue", fontWeight: "700" }}>OII687</span>{" "}
-              to join the event.{" "}
+              No Headset? No Problem. <br /> Make sure to{" "}
+              <a href="https://altvr.com/get-altspacevr/">
+                download AltspaceVr.
+              </a>{" "}
+              <br />
+              <a href="altspace://account.altvr.com/api/spaces/networking-world-6619">
+                {" "}
+                Join 2D mode.
+              </a>{" "}
             </h3>
           </div>
-     
         </div>
-        </div>
-        <style jsx>{`
+      </div>
+      <style jsx>{`
         .intro-button {
           margin-left: 2px;
           color: white;
@@ -100,9 +85,8 @@ const Welcome2 = (props) => {
           height: auto;
         }
       `}</style>
-
     </header>
   );
 };
 
-export default Welcome2;
+export default Welcome3;

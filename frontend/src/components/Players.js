@@ -1,24 +1,27 @@
-import React, {useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import GroupIcon from "@mui/icons-material/Group";
 
 const Players = () => {
-  const [players, setPlayers] = useState("")
+  const [players, setPlayers] = useState("");
 
-    var url = "https://virtual-ninjas-backend.herokuapp.com/api/player-count";
-   
-    useEffect(() => {
-      axios.get(url).then((response) => {
-        setPlayers(response.data);
-        console.log(response.data)
-      });
-    }, []);
-  
+  var url = "https://virtual-ninjas-backend.herokuapp.com/api/getPlayerCount";
 
-return (
-    <div>
-      <p>{players.data}</p>
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      setPlayers(response.data);
+      console.log(response.data);
+    });
+  }, []);
+
+  return (
+    <div style={{ textAlign: "right", paddingRight: "25px" }}>
+      <h6 style={{ color: "#505050", fontWeight: "500" }}>
+        {" "}
+        {players.players_in_Networking} <GroupIcon />
+      </h6>
     </div>
-)
-}
+  );
+};
 
-export default Players
+export default Players;

@@ -1,0 +1,2 @@
+*{box-sizing:border-box}body,html{background-color:#000a33;height:100vh}.App{font-family:sans-serif;display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh}.Screen{position:relative}.Button{position:absolute}.Button.debug{font-size:10px;background-color:red;opacity:.9;color:#fff;text-decoration:none;padding:2px;overflow:hidden}.wrapper{padding:20px}
+/*# sourceMappingURL=main.ebc84afd.chunk.css.map */
