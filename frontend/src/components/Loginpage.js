@@ -12,7 +12,7 @@ const handleChange = (event) => {
          <label>
          <input type="text" onChange={handleChange} value={value}  />
 
-         My value is  {value}
+         My value i  {value}
          </label>
      </div>
  )

@@ -4,6 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loginpage from "./Loginpage";
 import Axios from "axios";
 import LogoMagnid from "./LogoMagnid";
+import Players from "./Players";
+import HelpIcon from '@mui/icons-material/Help';
+
+const url = "https://virtua-ninjas.herokuapp.com/api/";
+const room_name = "networking";
 
 const Welcome = () => {
   // const url = "https://virtual-ninjas-backend.herokuapp.com/api/event/join";
@@ -29,50 +34,48 @@ const Welcome = () => {
   //   });
   // }
 
-
-
   return (
     <header>
       <div className="intro-logo jumbo-bg">
-        <div>
-          <LogoMagnid />
+        <LogoMagnid />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(1, 1fr)",
+            gridGap: 20,
+          }}
+        >
+          <div className="boxes">
+            {" "}
+            <Players />
+            <h3>
+              To join, enter the following code in Altspace in your VR headset:
+            </h3>
+            <p
+              style={{
+                color: "#FE2E86",
+                fontWeight: "700",
+                fontSize: "45px",
+                paddingBottom: "25px",
+              }}
+            >
+             <code>OII687</code> 
+            </p>{" "}
+            <a
+              style={{ textDecoration: "none" }}
+              href="altspace://account.altvr.com/api/spaces/networking-world-6619"
+            >
+              Join on a PC or Mac.
+            </a>
+          </div>
         </div>
 
-        <h1>Welcome to Magnid</h1>
-        <h3>
-         First time? <a> Get started </a>
-        </h3>
-        <h3>Already installed Altspace on VR? Enter the code <span style={{color:"blue", fontWeight:"700"}}>PDG162</span> </h3>
-        <h3>No headset available? Join <a href="altspace://account.altvr.com/api/spaces/philip-s-world-9152">here</a> </h3>
-        {/* {data.message && <h3 className=""> {data.message} </h3>}
-        <form onSubmit={(e) => submit(e)} style={{ paddingBottom: "10px" }}>
-          <label style={{ color: "white" }}>
-            Your Name:{" "}
-            <input
-             required
-              onChange={(e) => handle(e)}
-              id="name"
-              value={data.name}
-              type="text"
-              placeholder="name"
-              name="name"
-            />
-          </label>
-          <button className="intro-button">Enter</button>
-        </form>  */}
-        <img style={{ width: "19%" }} src="/animation-vr-man-dribbble.gif" />
-        <img
-          style={{ width: "19%" }}
-          src="/5ffd86ccac7b0153b653786d_8_200106_PR_VE_overview_01-500kb.jpg"
-        />
-
-        <div className="company-icons">
-          <p style={{ color: "white" }}>
-            © 2021 Magnid GmbH, All Rights Reserved. 
-          </p>
-        </div>
+      
       </div>
-
+      <div className="boxes1">
+        
+        <HelpIcon/> <a  style={{ textDecoration: "none", color:"black" }} href="https://alexanderpilotto.de/suco/setup?user=vrtest">I need help</a> 
+       </div>
       <style jsx>{`
         .intro-button {
           margin-left: 2px;
@@ -91,17 +94,9 @@ const Welcome = () => {
           background-image: none;
           color: white;
         }
-        header {
-          margin-bottom: 1rem;
-          height: 100vh;
-        }
+     
         .intro-logo {
           display: flex;
-          position: absolute;
-          top: 5em;
-          bottom: 0;
-          left: 0;
-          right: 0;
           flex-direction: column;
           justify-content: space-evenly;
           align-items: center;
@@ -122,9 +117,8 @@ const Welcome = () => {
         }
         .intro-logo h3 {
           font-size: 1rem;
-          font-weight: 300;
-          color: white;
-          margin-bottom: 2em;
+          font-weight: 600;
+          margin: 2em;
         }
 
         .intro-logo img {
